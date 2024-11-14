@@ -1,5 +1,5 @@
 import pygame
-from .constants import *
+from .constance import *
 
 class Board:
   def __init__(self):
@@ -9,4 +9,8 @@ class Board:
     self.red_kings = self.white_kings = 0
 
 def draw_cubes(self, win):
-  win.fill(BLACK)
+    win.fill(BLACK)
+    for row range(ROWS):
+      for col in range(row % 2, ROWS, 2):
+        pygame.draw.rect(win, RED, (row*SQUARE_SIZE, col*SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+        
