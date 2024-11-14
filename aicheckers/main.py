@@ -1,6 +1,6 @@
 import pygame
-
 from checkers.constance import *
+from checkers.board import Board
 
 FPS = 60
 
@@ -10,6 +10,7 @@ pygame.display.set_caption('AI VS CHATGPT IN CHECKERS')
 def main():
     run = True
     clock = pygame.time.Clock()
+    board = Board()
     
     while run:
         clock.tick(FPS)
@@ -19,7 +20,8 @@ def main():
                 run = False
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pass
-            
+        Board.draw_squares(WIN)
+        pygame.display.update()
     pygame.quit()
     
 main()
