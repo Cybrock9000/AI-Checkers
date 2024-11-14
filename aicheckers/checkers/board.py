@@ -1,4 +1,5 @@
 import pygame
+from .constants import *
 
 class Board:
   def __init__(self):
@@ -8,4 +9,4 @@ class Board:
     self.red_kings = self.white_kings = 0
 
 def draw_cubes(self, win):
-  
+  win.fill(BLACK)
